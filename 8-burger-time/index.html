@@ -31,7 +31,18 @@
 
     <a href="reference.html">Peek at an answer</a>
     <script>
-          
+        let menuStatus = false;
+        document.getElementById("burgerButton").addEventListener("click", e => {
+          if (!menuStatus) {
+            e.target.src = "burger-close.svg";
+            document.getElementById("menuItems").classList.remove("burger-hidden")
+          } else {
+            e.target.src = "burger-open.svg";
+            document.getElementById("menuItems").classList.add("burger-hidden")
+          }
+
+          menuStatus = !menuStatus;
+        })
     </script>
   </body>
 </html>

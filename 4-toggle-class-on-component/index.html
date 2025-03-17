@@ -13,6 +13,9 @@
           .red {
             background-color: red;
           }
+          .blue {
+            background-color: blue;
+          }
         </style>
     </head>
     <body>
@@ -22,8 +25,13 @@
       <p>Bonus points, use a => function with addEventListener to accomplish the goal</p>
       <button id="theButton" class="red">Click me!</button>
       <a href="reference.html">Peek at an answer</a>
+      <!-- <script>
+        document.getElementById("theButton").addEventListener("click", () => {
+          document.getElementById("theButton").classList.toggle("blue");
+        })
+      </script> -->
       <script>
-
+        document.getElementById("theButton").addEventListener("click", e => e.target.classList.toggle("blue"));
       </script>
     </body>
 </html>

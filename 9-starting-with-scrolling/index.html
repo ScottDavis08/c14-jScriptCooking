@@ -33,7 +33,14 @@
         <button id="scrollTo1">Scroll back to section 1</button>
       </section> 
       <script>
-
+        document.getElementById("scrollTo1").addEventListener("click", () => {
+          const section1Location = document.getElementById("section1").offsetTop
+          scroll({top: section1Location})
+        })
+        document.getElementById("scrollTo2").addEventListener("click", () => {
+          const section2Location = document.getElementById("section2").offsetTop
+          scroll({top: section2Location})
+        })
       </script>
     </body>
 </html>

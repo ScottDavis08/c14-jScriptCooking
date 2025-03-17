@@ -19,7 +19,11 @@
         <button onclick="sayHello()">Say Hello</button>
         <a href="reference.html">Peek at an answer</a>
         <script>
+          let inputBox = document.getElementById("name").value;
 
+          function sayHello() {
+            alert(`Hello ${inputBox}`);
+          }
         </script>
     </body>
 </html>
