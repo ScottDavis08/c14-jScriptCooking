@@ -53,7 +53,12 @@
           <p>Pellentesque arcu lorem, sagittis eu congue sed, tempus a ipsum. Donec pulvinar arcu ac ex aliquam semper. Praesent aliquet non nisl a efficitur. Ut at ultricies massa. Donec consectetur ullamcorper purus, vitae rutrum ante consectetur ut. Praesent elementum, diam eget gravida semper, dolor dui rhoncus orci, quis sodales quam justo a arcu. Integer rutrum, erat quis sagittis luctus, nisl libero convallis est, nec sodales mauris quam quis neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus nibh, cursus vel tincidunt at, consequat nec eros. Donec a nisl eu massa mattis vestibulum. Vivamus auctor ipsum quam, sit amet aliquet est hendrerit a. Fusce semper imperdiet sem vitae dignissim. Cras feugiat odio vitae elit accumsan, ut tincidunt leo mollis. Etiam sit amet porttitor leo. Sed malesuada, metus ac gravida sodales, nibh nunc mattis sapien, sit amet porta velit nisl eget tortor.</p>
         </section>  
         <script>
-
+          // Get the current scroll position.
+          document.addEventListener("scroll", () => {
+            // As the scroll position changes, change the top value in the class.
+            document.getElementById("parallaxBackground").style.top = (-window.scrollY / 4);
+            // Set the new top value to be 1/4 of the current Y value?
+          })
         </script>
     </body>
 </html>

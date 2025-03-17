@@ -33,7 +33,23 @@
         <button id="theButton">Add Star</button>
         <a href="reference.html">Peek at an answer</a>
         <script>
-          
+          document.getElementById("theButton").addEventListener("click", () => {
+            let background = document.getElementById("background");
+            let newStar = document.createElement("img");
+            let posX = Math.random() * background.clientHeight;
+            let posY = Math.random() * background.clientWidth;
+            let starType = Math.round((Math.random() * 3), 2);
+
+            starType === 0 ? starType++ : starType;
+
+            newStar.src = `star-${starType}.png`;
+
+            newStar.style.position = "absolute";
+            newStar.style.top = posX;
+            newStar.style.left = posY;
+
+            background.append(newStar);
+          })
         </script>
     </body>
 </html>
